@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lhh lpr lFf">
     <q-header 
       bordered
       class="bg-primary"
@@ -23,6 +23,7 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
+      behavior="mobile"
     >
       <ActionsDrawer />
     </q-drawer>
@@ -41,7 +42,7 @@ export default defineComponent({
   name: 'MainLayout',
   setup() {
     const data = reactive({
-      leftDrawerOpen: ref(false)
+      leftDrawerOpen: ref(true)
     })
 
     return {
