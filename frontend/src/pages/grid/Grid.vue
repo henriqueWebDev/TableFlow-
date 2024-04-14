@@ -1,16 +1,17 @@
 <template>
-  <div>
+  <div
+    style="border: solid 1px black;"
+  >
     <q-img
+      id="grid"
       :src="background"
-      :ratio="16/9"
       :draggable="false"
-      fit="cover"
-      class="bg-red"
+      :fit="'cover'"
     >
-      <token
-        v-for="(item, index) in tokens" 
+      <Token
+        v-for="(item, index) in tokens"
         :key="index"
-        :token-data="item"
+        :tokenData="item"
       />
     </q-img>
   </div>

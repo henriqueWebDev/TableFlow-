@@ -25,20 +25,20 @@ export default class TokenServices {
 
     handleTokenSize(data: any) {
         if (data.size.category === "xs") {
+            data.size.height = 80
+            data.size.width = 80
+        } else if (data.size.category === "sm") {
             data.size.height = 90
             data.size.width = 90
-        } else if (data.size.category === "sm") {
+        } else if (data.size.category === "md") {
             data.size.height = 100
             data.size.width = 100
-        } else if (data.size.category === "md") {
+        } else if (data.size.category === "lg") {
             data.size.height = 110
             data.size.width = 110
-        } else if (data.size.category === "lg") {
+        } else if (data.size.category === "xl") {
             data.size.height = 120
             data.size.width = 120
-        } else if (data.size.category === "xl") {
-            data.size.height = 130
-            data.size.width = 130
         }
     }
 

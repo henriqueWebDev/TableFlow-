@@ -1,47 +1,20 @@
 <template>
-  <VueDraggableResizable
-    class="bg-transparent bg-red"
+<vue-draggable-resizable
+    class="bg-transparent"
     :h="size.height"
     :w="size.width"
     :x="position.x"
     :y="position.y"
     :parent="true"
-    @click="service.preventMovePage"
   >
-    <div>
-      vida
-    </div>
-    <div>
-      magia
-    </div>
-    <div>
-      sanidade
-    </div>
-    <q-img
+  <q-img
       :src="tokenImage"
-      :ratio="1/2"
-      spinner-color="primary"
-      fit="cover"
+      spinner-color="black"
       :draggable="false"
+      :ratio="1"
+      fit="fill"
     />
-    <div>
-      <!-- <q-select 
-        dense
-        :options="status.life.options"
-        v-model="status.life.current" 
-        class="text-subtitle2 text-bold"
-        behavior="dialog"
-        hide-dropdown-icon
-        style="text-align: center;"
-      >
-      <template v-slot:selected>
-        <div class="text-red text-bold">
-          {{status.life.current}}/{{status.life.total}}
-        </div>
-      </template>
-      </q-select> -->
-    </div>
-  </VueDraggableResizable>
+  </vue-draggable-resizable>
 </template>
 
 <script lang="ts">
